@@ -11,6 +11,6 @@ wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM
 
 
 
-rm /home/hassan/openwrt/target/linux/ramips/image/mt7621.mk
-cd /home/hassan/openwrt/target/linux/ramips/image
+rm /home/user/openwrt/target/linux/ramips/image/mt7621.mk
+cd /home/user/openwrt/target/linux/ramips/image
 wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621.mk
