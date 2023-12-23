@@ -16,13 +16,5 @@ cd /home/user/openwrt/target/linux/ramips/image
 wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621.mk
 cd\
 .
-.
 
-rm /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/10_fix_wifi_mac
-cd /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/10_fix_wifi_mac
-
-cd\
-.
-.
 
