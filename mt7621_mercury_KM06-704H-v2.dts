@@ -147,11 +147,13 @@
 };
 
 &pcie0 {
-	wifi@0,0 {
-		compatible = "mediatek,mt76";
+	mt76@0,0 {
 		reg = <0x0000 0 0 0 0>;
-		/* 5 GHz (phy1) does not take the address from calibration data,
-		   but setting it manually here works */
+		mediatek,mtd-eeprom = <&factory 0x0000>;
+		/*led {
+			led-sources = <3>;
+			led-active-low;
+		};*/
 	};
 };
 
