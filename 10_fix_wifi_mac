@@ -142,7 +142,10 @@ case "$board" in
 			macaddr_setbit_la "$(macaddr_add $hw_mac_addr 0x100000)" > /sys${DEVPATH}/macaddress
 		fi
 		;;
-	mercury,KM08-704H-v1|\
+	mercury,KM06-704H-v1|\
+	mercury,KM06-704H-v2)
+	mercury,KM08-708H-v1)
+	mercury,KM08-708H-v2)
 	raisecom,msg1500-x-00)
 		[ "$PHYNBR" = "0" ] && \
 			macaddr_setbit_la "$(get_mac_label)" > /sys${DEVPATH}/macaddress
