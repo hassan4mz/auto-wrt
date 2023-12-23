@@ -1882,6 +1882,15 @@ define Device/planex_vr500
 endef
 TARGET_DEVICES += planex_vr500
 
+define Device/mercury_nand_separate
+  $(Device/nand)
+  $(Device/uimage-lzma-loader)
+  DEVICE_VENDOR := mercury
+  IMAGES += kernel1.bin rootfs0.bin
+  IMAGE/kernel1.bin := append-kernel
+  IMAGE/rootfs0.bin := append-ubi | check-size
+endef
+
 define Device/mercury_KM06-704H-v1
   $(Device/nand)
   $(Device/uimage-lzma-loader)
@@ -1905,7 +1914,7 @@ endef
 TARGET_DEVICES += mercury_KM08-708H-v1
 
 define Device/mercury_KM06-704H-v2
-$(Device/xiaomi_nand_separate)
+$(Device/mercury_nand_separate)
   DEVICE_MODEL := KM06-704H
   DEVICE_VARIANT := V2
   IMAGE_SIZE := 124416k
@@ -1914,7 +1923,7 @@ endef
 TARGET_DEVICES += mercury_KM06-704H-v2
 
 define Device/mercury_KM08-708H-v2
-$(Device/xiaomi_nand_separate)
+$(Device/mercury_nand_separate)
   DEVICE_MODEL := KM08-708H
   DEVICE_VARIANT := V2
   IMAGE_SIZE := 124416k
