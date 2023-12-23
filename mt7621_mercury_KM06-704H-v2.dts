@@ -6,7 +6,7 @@
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "mercury,KM06-704H-v1", "mediatek,mt7621-soc";
+	compatible = "mercury,KM06-704H-v2", "mediatek,mt7621-soc";
 	model = "MERCURY KM06-704H-JM";
 
 
