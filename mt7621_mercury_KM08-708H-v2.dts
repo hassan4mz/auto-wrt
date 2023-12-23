@@ -6,7 +6,7 @@
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "mercury,KM08-708H-v1", "mediatek,mt7621-soc";
+	compatible = "mercury,KM08-708H-v2", "mediatek,mt7621-soc";
 	model = "MERCURY KM08-708H";
 
 	aliases {
