@@ -1893,6 +1893,39 @@ define Device/mercury_KM06-704H-v1
 endef
 TARGET_DEVICES += mercury_KM06-704H-v1
 
+define Device/mercury_KM08-708H-v1
+  $(Device/nand)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 129280k
+  DEVICE_VENDOR := MERCURY
+  DEVICE_MODEL := KM08-708H
+  DEVICE_VARIANT := V1
+  DEVICE_PACKAGES := kmod-mt7615-firmware kmod-usb3 kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += mercury_KM08-708H-v1
+
+define Device/mercury_KM06-704H-v2
+  $(Device/nand)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 129280k
+  DEVICE_VENDOR := MERCURY
+  DEVICE_MODEL := KM06-704H
+  DEVICE_VARIANT := V2
+  DEVICE_PACKAGES := kmod-mt7615-firmware kmod-usb3 kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += mercury_KM06-704H-v2
+
+define Device/mercury_KM08-708H-v2
+  $(Device/nand)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 129280k
+  DEVICE_VENDOR := MERCURY
+  DEVICE_MODEL := KM08-708H
+  DEVICE_VARIANT := V2
+  DEVICE_PACKAGES := kmod-mt7615-firmware kmod-usb3 kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += mercury_KM08-708H-v2
+
 define Device/raisecom_msg1500-x-00
   $(Device/nand)
   $(Device/uimage-lzma-loader)
