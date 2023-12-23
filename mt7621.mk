@@ -1905,24 +1905,20 @@ endef
 TARGET_DEVICES += mercury_KM08-708H-v1
 
 define Device/mercury_KM06-704H-v2
-  $(Device/nand)
-  $(Device/uimage-lzma-loader)
-  IMAGE_SIZE := 129280k
-  DEVICE_VENDOR := MERCURY
-  DEVICE_MODEL := KM06-704H
-  DEVICE_VARIANT := V2
-  DEVICE_PACKAGES := kmod-mt7615-firmware kmod-usb3 kmod-usb-ledtrig-usbport
+$(Device/xiaomi_nand_separate)
+  DEVICE_MODEL := KM08-708H
+  DEVICE_VARIANT := V1
+  IMAGE_SIZE := 124416k
+  DEVICE_PACKAGES += kmod-mt7615 kmod-usb3 kmod-usb-ledtrig-usbport -uboot-envtools
 endef
 TARGET_DEVICES += mercury_KM06-704H-v2
 
 define Device/mercury_KM08-708H-v2
-  $(Device/nand)
-  $(Device/uimage-lzma-loader)
-  IMAGE_SIZE := 129280k
-  DEVICE_VENDOR := MERCURY
+$(Device/xiaomi_nand_separate)
   DEVICE_MODEL := KM08-708H
-  DEVICE_VARIANT := V2
-  DEVICE_PACKAGES := kmod-mt7615-firmware kmod-usb3 kmod-usb-ledtrig-usbport
+  DEVICE_VARIANT := V1
+  IMAGE_SIZE := 124416k
+  DEVICE_PACKAGES += kmod-mt7615 kmod-usb3 kmod-usb-ledtrig-usbport -uboot-envtools
 endef
 TARGET_DEVICES += mercury_KM08-708H-v2
 
