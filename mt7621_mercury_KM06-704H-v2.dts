@@ -7,38 +7,36 @@
 
 / {
 	compatible = "mercury,KM06-704H-v1", "mediatek,mt7621-soc";
-	model = "MERCURY KM06-704H";
+	model = "MERCURY KM06-704H-JM";
+
 
 	aliases {
-		led-boot = &led_usb;
-		led-failsafe = &led_usb;
-		led-upgrade = &led_usb;
+		led-boot = &wlan2g;
+		led-failsafe = &wlan2g;
+		led-upgrade = &wlan2g;
 		label-mac-device = &gmac0;
 	};
 
 	leds {
 		compatible = "gpio-leds";
 
-		wlan2g {
+		wlan2g: wlan2g {
 			label = "blue:wlan2g";
 			gpios = <&gpio 13 GPIO_ACTIVE_LOW>;
 			linux,default-trigger = "phy0radio";
 		};
 
-		wlan5g {
-			label = "blue:wlan5g";
-			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
-			linux,default-trigger = "phy1radio";
-		};
-
-		led_usb: usb {
-			label = "blue:usb";
-			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
-			trigger-sources = <&ehci_port2>;
-			linux,default-trigger = "usbport";
-		};
+		lan2  {
+                        label = "blue:lan2";
+                        gpios = <&gpio 14 GPIO_ACTIVE_LOW>;
+                        linux,default-trigger = "mt7530-0:03:link";
+                };
 	};
 
+	chosen {
+		bootargs = "console=ttyS0,115200";
+		bootargs-override = "console=ttyS0,115200";
+	};
 	keys {
 		compatible = "gpio-keys";
 
@@ -50,15 +48,10 @@
 
 		wps {
 			label = "wps";
-			gpios = <&gpio 18 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
 			linux,code = <KEY_WPS_BUTTON>;
 		};
 
-		wifi {
-			label = "wifi";
-			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
-			linux,code = <KEY_RFKILL>;
-		};
 	};
 };
 
