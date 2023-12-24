@@ -37,76 +37,80 @@ echo " "
 
 1)
 
-rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM06-704H-v1.dts
-rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM06-704H-v2.dts
-rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM08-708H-v1.dts
-rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM08-708H-v2.dts
-cd /home/user/openwrt/target/linux/ramips/dts/
+	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM06-704H-v1.dts
+	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM06-704H-v2.dts
+	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM08-708H-v1.dts
+	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM08-708H-v2.dts
+	cd /home/user/openwrt/target/linux/ramips/dts/
+	sleep 3
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM06-704H-v1.dts
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM08-708H-v1.dts
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM06-704H-v2.dts
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM08-708H-v2.dts
 
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM06-704H-v1.dts
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM08-708H-v1.dts
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM06-704H-v2.dts
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM08-708H-v2.dts
+	sleep 3
+
+	rm /home/user/openwrt/target/linux/ramips/image/mt7621.mk
+	cd /home/user/openwrt/target/linux/ramips/image
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621.mk
 
 
-
-rm /home/user/openwrt/target/linux/ramips/image/mt7621.mk
-cd /home/user/openwrt/target/linux/ramips/image
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621.mk
-
-
-           sleep 3
-		   egy		   
+        sleep 3
+        egy		   
+        read -s -n 1
+        ;;
 
 
 
 2)
         
-rm /home/user/openwrt/package/base-files/files/bin/config_generate
-cd /home/user/openwrt/package/base-files/files/bin/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/config_generate
+	rm /home/user/openwrt/package/base-files/files/bin/config_generate
+	cd /home/user/openwrt/package/base-files/files/bin/
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/config_generate
 
+	sleep 3
+ 	
+	rm /home/user/openwrt/package/base-files/files/etc/banner
+	cd /home/user/openwrt/package/base-files/files/etc/
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/banner
+	sleep 3
 
-rm /home/user/openwrt/package/base-files/files/etc/banner
-cd /home/user/openwrt/package/base-files/files/etc/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/banner
-
-
-rm /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
-cd /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mac80211.sh
-
-rm /home/user/openwrt/package/network/services/dnsmasq/files/dhcp.conf
-cd /home/user/openwrt/package/network/services/dnsmasq/files/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/dhcp.conf
-
-rm /home/user/openwrt/target/linux/ramips/mt7621/base-files/lib/upgrade/platform.sh
-cd  /home/user/openwrt/target/linux/ramips/mt7621/base-files/lib/upgrade/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/platform.sh
-
-rm /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/10_fix_wifi_mac
-cd /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/10_fix_wifi_mac
+	rm /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+	cd /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mac80211.sh
+	sleep 3
+	rm /home/user/openwrt/package/network/services/dnsmasq/files/dhcp.conf
+	cd /home/user/openwrt/package/network/services/dnsmasq/files/
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/dhcp.conf
+	sleep 3
+	rm /home/user/openwrt/target/linux/ramips/mt7621/base-files/lib/upgrade/platform.sh
+	cd  /home/user/openwrt/target/linux/ramips/mt7621/base-files/lib/upgrade/
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/platform.sh
+ 	sleep 3
+	rm /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/10_fix_wifi_mac
+	cd /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/
+	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/10_fix_wifi_mac
+   
    sleep 3
    egy
    
-  
+   read -s -n 1
+   ;;
+
 3)
-        
-		
-		
-
-git restore /home/user/openwrt/package/base-files/files/bin/config_generate
-git restore /home/user/openwrt/package/base-files/files/etc/banner /
-git restore /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh 
-git restore /home/user/openwrt/package/network/services/dnsmasq/files/dhcp.conf 
-git restore /home/user/openwrt/target/linux/ramips/mt7621/base-files/lib/upgrade/platform.sh
-git restore /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/10_fix_wifi_mac
-git restore /home/user/openwrt/target/linux/ramips/image/mt7621.mk
+	git restore /home/user/openwrt/package/base-files/files/bin/config_generate
+	git restore /home/user/openwrt/package/base-files/files/etc/banner /
+	git restore /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh 
+	git restore /home/user/openwrt/package/network/services/dnsmasq/files/dhcp.conf 
+	git restore /home/user/openwrt/target/linux/ramips/mt7621/base-files/lib/upgrade/platform.sh
+	git restore /home/user/openwrt/target/linux/ramips/mt7621/base-files/etc/hotplug.d/ieee80211/10_fix_wifi_mac
+	git restore /home/user/openwrt/target/linux/ramips/image/mt7621.mk
 
    sleep 3
    egy
-   
+   read -s -n 1
+    ;;
+
 
 4)
             echo ""
