@@ -56,7 +56,7 @@ echo " "
 
 
         sleep 3
-        egy		   
+        sh egy		   
         read -s -n 1
         ;;
 
@@ -92,7 +92,7 @@ echo " "
 	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/10_fix_wifi_mac
    
    sleep 3
-   egy
+   sh egy
    
    read -s -n 1
    ;;
@@ -107,7 +107,7 @@ echo " "
 	git restore /home/user/openwrt/target/linux/ramips/image/mt7621.mk
 
    sleep 3
-   egy
+   sh egy
    read -s -n 1
     ;;
 
@@ -130,4 +130,4 @@ echo " "
            ;;
       esac
 
-egy
+sh egy
