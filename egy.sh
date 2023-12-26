@@ -98,6 +98,7 @@ echo " "
    ;;
 
 3)
+	cd  /home/user/openwrt
 	git restore /home/user/openwrt/package/base-files/files/bin/config_generate
 	git restore /home/user/openwrt/package/base-files/files/etc/banner /
 	git restore /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh 
