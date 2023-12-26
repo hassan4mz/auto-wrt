@@ -100,7 +100,7 @@ echo " "
 3)
 	cd  openwrt
 	git restore package/base-files/files/bin/config_generate
-	git restore package/base-files/files/etc/banner /
+	git restore package/base-files/files/etc/banner 
 	git restore package/kernel/mac80211/files/lib/wifi/mac80211.sh 
 	git restore package/network/services/dnsmasq/files/dhcp.conf 
 	git restore target/linux/ramips/mt7621/base-files/lib/upgrade/platform.sh
