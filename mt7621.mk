@@ -1931,6 +1931,22 @@ $(Device/mercury_nand_separate)
 endef
 TARGET_DEVICES += mercury_KM08-708H-v2
 
+define Device/mercury_KM08-708H-v3
+  $(Device/nand)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 32768k
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
+	check-size
+  DEVICE_VENDOR := mercury
+  DEVICE_MODEL := KM08-708H
+  DEVICE_VARIANT := V3
+  DEVICE_PACKAGES := kmod-mt7615 kmod-usb3 -uboot-envtools
+endef
+TARGET_DEVICES += mercury_KM08-708H-v3
+
+
+
 define Device/raisecom_msg1500-x-00
   $(Device/nand)
   $(Device/uimage-lzma-loader)
