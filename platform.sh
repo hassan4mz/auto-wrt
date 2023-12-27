@@ -105,6 +105,7 @@ platform_do_upgrade() {
 	mercury,KM06-704H-v2|\
 	mercury,KM08-708H-v1|\
 	mercury,KM08-708H-v2|\
+ 	mercury,KM08-708H-v3|\
 	raisecom,msg1500-x-00|\
 	rostelecom,rt-sf-1|\
 	sercomm,na502|\
