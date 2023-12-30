@@ -41,12 +41,14 @@ echo " "
 	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM06-704H-v2.dts
 	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM08-708H-v1.dts
 	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM08-708H-v2.dts
+ 	rm /home/user/openwrt/target/linux/ramips/dts/mt7621_mercury_KM08-708H-v3.dts
 	cd /home/user/openwrt/target/linux/ramips/dts/
 	sleep 3
 	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM06-704H-v1.dts
 	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM08-708H-v1.dts
 	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM06-704H-v2.dts
 	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM08-708H-v2.dts
+ 	wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mt7621_mercury_KM08-708H-v3.dts
 
 	sleep 3
 
