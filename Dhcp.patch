@@ -1,0 +1,7 @@
+--- a/home/user/openwrt/package/network/services/dnsmasq/files/dhcp.conf
++++ b/home/user/openwrt/package/network/services/dnsmasq/files/dhcp.conf
+@@ +37,16 @@
+ 
+ config dhcp wan
+ 	option interface	wan
++	option ignore	1
