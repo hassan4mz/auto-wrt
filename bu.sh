@@ -6,9 +6,11 @@ cd /home/user/openwrt/package/base-files/files/etc/
 wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/banner
 
 
-rm /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
-cd /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mac80211.sh
+#rm /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#cd /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/
+#wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/mac80211.sh
+sed -i "s/.ssid=OpenWrt/.ssid=JM-WIFI/" /home/user/openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
 
 rm /home/user/openwrt/package/network/services/dnsmasq/files/dhcp.conf
 cd /home/user/openwrt/package/network/services/dnsmasq/files/
