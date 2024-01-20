@@ -1,7 +1,5 @@
-rm /home/user/openwrt/package/base-files/files/bin/config_generate
-cd /home/user/openwrt/package/base-files/files/bin/
-wget https://raw.githubusercontent.com/hassan4mz/auto-wrt/main/config_generate
 
+sed -i "s/192.168.1/192.168.10/" /home/user/openwrt/package/base-files/files/bin/config_generate
 
 rm /home/user/openwrt/package/base-files/files/etc/banner
 cd /home/user/openwrt/package/base-files/files/etc/
