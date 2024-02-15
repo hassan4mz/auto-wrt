@@ -12,3 +12,6 @@ sed -i '/set wireless.radio${devidx}.hwmode=11/a\\t\t\tset wireless.radio${devid
 sed -i '/set wireless.default_radio${devidx}.encryption=psk2/a\\t\t\tset wireless.default_radio${devidx}.key=password\n\t\t\tset wireless.default_radio${devidx}.ieee80211k=1' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
    sed -i "/DISTRIB_DESCRIPTION/c\DISTRIB_DESCRIPTION=\"%D %C by Kiddin'\"" base-files/files/etc/openwrt_release
+
+
+git clone  https://github.com/AlchemillaHQ/luci-app-pbx.git
