@@ -15,3 +15,7 @@ sed -i '/set wireless.default_radio${devidx}.encryption=psk2/a\\t\t\tset wireles
 
 
 git clone  https://github.com/AlchemillaHQ/luci-app-pbx.git
+
+IMAGES += factory.bin
+  IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | \
+	check-size
